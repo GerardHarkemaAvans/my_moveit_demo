@@ -80,10 +80,10 @@ void behavior_go_pose_ik::stateHandler(){
       {
         state_ik_get_joints_from_pose::input_keys_type input_key;
         input_key.pose = object_pose;
-        input_key.tool_link = "end_effector_link";
+        input_key.tool_link = "tcp_link";
         input_key.group_name = "arm";
         input_key.offset = 0.01;
-        input_key.rotation = 1.00;//1.57;
+        input_key.rotation = 1.57;
         state_ik_get_joints_from_pose::output_keys_type output_key;
         DEBUG_PRINT(DEBUG_ITEMS & DEBUG_BEHAVIORS_STATES, "%s: %s\n", behavior_object_name.c_str(), "Executing state_ik_calculate_pose_joints");
         switch(ik_get_joints_from_pose->simpleEexecute(input_key, output_key)){

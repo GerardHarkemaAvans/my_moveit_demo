@@ -50,10 +50,10 @@ class behaivior_go_pose_ikSM(Behavior):
 		arm_group = 'arm'
 		# x:983 y:40, x:530 y:236
 		_state_machine = OperatableStateMachine(outcomes=['finished', 'failed'], input_keys=['frames'])
-		_state_machine.userdata.offset = 0.05
+		_state_machine.userdata.offset = 0.01
 		_state_machine.userdata.rotation = 1.57
 		_state_machine.userdata.move_group_prefix = ''
-		_state_machine.userdata.tool_link = "tool_link"
+		_state_machine.userdata.tool_link = "tcp_link"
 		_state_machine.userdata.frames = []
 		_state_machine.userdata.group_name = 'arm'
 

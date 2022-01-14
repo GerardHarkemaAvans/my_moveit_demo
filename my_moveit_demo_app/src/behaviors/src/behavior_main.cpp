@@ -22,7 +22,7 @@ behavior_main::behavior_main(const std::string& behavior_object_name, bool simpl
 
   /* Write here your code */
   srdf_to_moveit = new state_srdf_to_moveit("srdf_to_moveit", "arm");
-  go_pose_ik = new behavior_go_pose_ik("go_pose_ik", true);
+  go_pose_ik = new behavior_go_pose_ik("go_pose_ik", false);
 
   if(!simple_execution_mode)
     state_timer = node_handle.createTimer(ros::Duration(0.100)/*100ms*/,
